@@ -58,9 +58,12 @@ echo "==================== Starting executing ci-helpers scripts ===============
 wget -q "https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh" -O archiconda.sh
 chmod +x archiconda.sh
 mkdir $HOME/.conda
+echo"bash archiconda.sh -b -p $HOME/miniconda"
 bash archiconda.sh -b -p $HOME/miniconda
+echo "export PATH=$HOME/miniconda/bin:$PATH"
 export PATH="$HOME/miniconda/bin:$PATH"
 sudo cp -r $HOME/miniconda/bin/* /usr/bin/
+echo "sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh"
 sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 echo "conda activate" >> ~/.bashrc
 source ~/.bashrc
