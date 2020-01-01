@@ -67,7 +67,8 @@ echo "sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/co
 sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 echo "conda activate" >> ~/.bashrc
 source ~/.bashrc
-sudo conda activate 
+sudo chmod -R +x  /home/travis/miniconda/ 
+conda activate 
 # Install common Python dependencies
 source "$( dirname "${BASH_SOURCE[0]}" )"/setup_dependencies_common.sh
 
