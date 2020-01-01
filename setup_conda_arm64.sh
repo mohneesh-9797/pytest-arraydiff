@@ -60,8 +60,6 @@ chmod +x archiconda.sh
 mkdir $HOME/.conda
 bash archiconda.sh -b -p $HOME/miniconda
 export PATH="$HOME/miniconda/bin:$PATH"
-$HOME/miniconda/bin/conda init bash
-source ~/.bash_profile
 sudo cp -r $HOME/miniconda/bin/* /usr/bin/
 conda activate base 
 # Install common Python dependencies
