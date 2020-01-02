@@ -30,10 +30,6 @@ matrix:
       - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
       - PIP_DEPENDENCIES="codecov"
       - PYTHON_VERSION=3.5
-      install: 
-      - source setup_conda_arm64.sh
-      - conda remove pytest-arraydiff --force || true
-      - pip install --user -e .
     - arch: arm64
       env:
       - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
@@ -44,7 +40,7 @@ matrix:
       - conda remove pytest-arraydiff --force || true
       - pip install --user -e .
 install:
-    - git clone git://github.com/astropy/ci-helpers.git
+    - git clone git://github.com/mohneesh9797-puresoftware/ci-helpers
     - source ci-helpers/travis/setup_conda.sh
 
     # Make sure pytest-arraydiff wasn't installed by conda
