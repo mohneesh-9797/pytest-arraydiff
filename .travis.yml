@@ -50,13 +50,15 @@ install:
     - if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
          pip install --user -e .
       else 
-         pip install --user -e . 
+         pip install -e . 
+      fi
 
 script:
    - python -c 'import pytest_arraydiff.plugin'
    - pytest -vv --arraydiff --cov pytest_arraydiff tests
    - pytest -vv --cov pytest_arraydiff --cov-append tests
    - python setup.py check --restructuredtext
+   
 
 after_success:
    - codecov
