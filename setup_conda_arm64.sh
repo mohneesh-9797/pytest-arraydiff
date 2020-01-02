@@ -65,7 +65,9 @@ export PATH="$HOME/miniconda/bin:$PATH"
 sudo cp -r $HOME/miniconda/bin/* /usr/bin/
 echo "sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh"
 sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
-sudo chmod -R +x  /home/travis/miniconda/ 
+echo "sudo chmod -R +x  /home/travis/miniconda/"
+sudo chmod -R 777  /home/travis/miniconda/ 
+echo "source  /home/travis/miniconda/etc/profile.d/conda.sh "
 source  /home/travis/miniconda/etc/profile.d/conda.sh 
 echo "conda activate " >> ~/.bashrc
 source ~/.bashrc
