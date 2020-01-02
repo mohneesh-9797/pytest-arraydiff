@@ -63,15 +63,6 @@ bash archiconda.sh -b -p $HOME/miniconda
 echo "export PATH=$HOME/miniconda/bin:$PATH"
 export PATH="$HOME/miniconda/bin:$PATH"
 sudo cp -r $HOME/miniconda/bin/* /usr/bin/
-echo "sudo ln -s /home/travis/miniconda/etc/profile.d/conda.sh /etc/profile.d/conda.sh"
-sudo ln -s /etc/profile.d/conda.sh
-echo "sudo chmod -R +x  /home/travis/miniconda/"
-sudo chmod -R 777  /home/travis/miniconda/ 
-echo "source  /home/travis/miniconda/etc/profile.d/conda.sh "
-source /etc/profile.d/conda.sh
-echo "conda activate " >> ~/.bashrc
-source ~/.bashrc
-conda activate 
 # Install common Python dependencies
 source "$( dirname "${BASH_SOURCE[0]}" )"/setup_dependencies_common.sh
 
