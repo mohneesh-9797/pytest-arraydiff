@@ -47,7 +47,10 @@ install:
     - conda remove pytest-arraydiff --force || true
 
     # Need to use develop instead of install to make sure coverage works
-    - pip install -e .
+    - if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
+         pip install --user -e .
+      else 
+         pip install --user -e . 
 
 script:
    - python -c 'import pytest_arraydiff.plugin'
