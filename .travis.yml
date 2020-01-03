@@ -50,6 +50,7 @@ install:
     - if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
          sudo rm /usr/bin/lsb_release;
          pip install --user cython;
+         pip install --user numpy;
          pip install --user -e .;
       else 
          pip install -e .;
