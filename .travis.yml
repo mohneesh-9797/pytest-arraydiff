@@ -48,9 +48,9 @@ install:
 
     # Need to use develop instead of install to make sure coverage works
     - if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
-         pip install --user -e .
+         pip install --user -e .;
       else 
-         pip install -e . 
+         pip install -e .;
       fi
 
 script:
