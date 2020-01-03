@@ -29,7 +29,7 @@ matrix:
       env:
       - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
       - PIP_DEPENDENCIES="codecov"
-      - PYTHON_VERSION=3.5
+      - PYTHON_VERSION=3.7
     - arch: arm64
       env:
       - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
