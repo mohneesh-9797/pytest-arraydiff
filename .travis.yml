@@ -20,25 +20,7 @@ matrix:
       env:
       - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
       - PIP_DEPENDENCIES="codecov"
-      - PYTHON_VERSION=3.6
-      install: 
-      - source setup_conda_arm64.sh
-      - conda remove pytest-arraydiff --force || true
-      - pip install --user -e .
-    - arch: arm64
-      env:
-      - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
-      - PIP_DEPENDENCIES="codecov"
       - PYTHON_VERSION=3.7
-    - arch: arm64
-      env:
-      - CONDA_DEPENDENCIES="pytest pytest-cov numpy astropy"
-      - PIP_DEPENDENCIES="codecov"
-      - PYTHON_VERSION=2.7
-      install: 
-      - source setup_conda_arm64.sh
-      - conda remove pytest-arraydiff --force || true
-      - pip install --user -e .
 install:
     - git clone git://github.com/mohneesh9797-puresoftware/ci-helpers
     - source ci-helpers/travis/setup_conda.sh
