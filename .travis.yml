@@ -49,6 +49,7 @@ install:
     # Need to use develop instead of install to make sure coverage works
     - if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
          sudo rm /usr/bin/lsb_release;
+         pip install --user --upgrade pip;
          pip install --user cython;
          pip install --user numpy;
          pip install --user -e .;
