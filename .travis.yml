@@ -30,7 +30,7 @@ install:
 
     # Need to use develop instead of install to make sure coverage works
     - sudo pip install -e .;
-      
+    - sudo pip insta pytest       
 
 script:
    - python -c 'import pytest_arraydiff.plugin'
