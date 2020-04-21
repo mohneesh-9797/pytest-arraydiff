@@ -29,7 +29,7 @@ install:
     - conda remove pytest-arraydiff --force || true
 
     # Need to use develop instead of install to make sure coverage works
-    - pip install -e .;
+    - sudo pip install -e .;
       
 
 script:
