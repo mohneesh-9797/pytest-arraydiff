@@ -23,7 +23,7 @@ matrix:
       - PYTHON_VERSION=3.7
 install:
     - git clone git://github.com/astropy/ci-helpers
-    - source ci-helpers/travis/setup_conda.sh
+    - source ci-helpers/mohneesh-puresoftware/setup_conda.sh
 
     # Make sure pytest-arraydiff wasn't installed by conda
     - conda remove pytest-arraydiff --force || true
